@@ -1,2 +1,2 @@
-# http-process
-an http server from scratch in C++
+# web-protocol
+a web protocol from scratch in C++
