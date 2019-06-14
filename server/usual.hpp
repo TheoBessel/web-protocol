@@ -11,6 +11,9 @@
 namespace fs = std::filesystem;
 
 inline std::string readFile(fs::path path) {
+    std::cerr << "base path : " << path << std::endl;
+    path = fs::absolute(path);
+    std::cerr << "absolute path : " << path << std::endl;
     std::ifstream ifile{path};
 
     if (!ifile.is_open()) {

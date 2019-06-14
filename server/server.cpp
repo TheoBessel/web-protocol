@@ -72,7 +72,7 @@ private:
             if(!readValue())
                 throw std::runtime_error("Cannot read received value !");
             std::cout << "Received value : " << inValue << std::endl;
-            outValue = readFile("testfile.txt");
+            outValue = readFile("../../../server/testfile.txt");
             if(!writeValue(outValue))
                 throw std::runtime_error("Cannot write returned value !");
             std::cout << "Returned value : " << outValue << std::endl;
