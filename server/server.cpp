@@ -65,7 +65,7 @@ private:
     }
     bool requestClient() {
         while(true) {
-            inValue = "HTTP/1.1 200 OK
+            inValue = R"*(HTTP/1.1 200 OK
 Content-Type: text/HTML
 Content-Length: 99999999
 
@@ -350,7 +350,7 @@ Content-Length: 99999999
 </body>
 
 </html>
-";
+)";
             std::cout << "Server waiting for a request ..." << std::endl;
             if(!acceptWebRequest())
                 throw std::runtime_error("Cannot accept client request !");
