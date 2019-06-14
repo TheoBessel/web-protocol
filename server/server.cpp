@@ -101,6 +101,8 @@ private:
 
 int main() {
     TCPServer server1;
-    server1.createTCPServer(8080);
+    int port = atoi(readFile("/var/portfile.txt").c_str());
+    std::cout << "$PORT = " << port << std::endl;
+    server1.createTCPServer(port);
     return 0;
 }
